@@ -1,0 +1,664 @@
+body{
+    position: relative;
+    font-family: 'verdana', sans-serif;
+    background-color: rgb(21, 14, 27);
+}
+
+.contenedor-principal{
+    position: relative;
+    top: auto;
+    left: 50vh;
+    width: 100vh;
+    height: auto; /* Original de 100vh */
+    display: block;
+    justify-content: center;
+    border-radius: 2%;
+    animation: cambioGradiente 1s;
+    background: linear-gradient(rgb(255, 255, 255) 45%, rgb(89, 0, 255) 100%);
+}
+
+/* Animación de marea */
+@keyframes cambioGradiente {
+    0% {
+        background: linear-gradient(rgb(255, 255, 255) 30%, rgb(89, 0, 255) 100%);
+    }
+    5% {
+        background: linear-gradient(rgb(255, 255, 255) 25%, rgb(89, 0, 255) 100%);
+    }
+    10% {
+        background: linear-gradient(rgb(255, 255, 255) 20%, rgb(89, 0, 255) 100%);
+    }
+    15% {
+        background: linear-gradient(rgb(255, 255, 255) 25%, rgb(89, 0, 255) 100%);
+    }
+    20% {
+        background: linear-gradient(rgb(255, 255, 255) 30%, rgb(89, 0, 255) 100%);
+    }
+    25% {
+        background: linear-gradient(rgb(255, 255, 255) 35%, rgb(89, 0, 255) 100%);
+    }
+    30% {
+        background: linear-gradient(rgb(255, 255, 255) 40%, rgb(89, 0, 255) 100%);
+    }
+    30% {
+        background: linear-gradient(rgb(255, 255, 255) 45%, rgb(89, 0, 255) 100%);
+    }
+    35% {
+        background: linear-gradient(rgb(255, 255, 255) 50%, rgb(89, 0, 255) 100%);
+    }
+    40% {
+        background: linear-gradient(rgb(255, 255, 255) 55%, rgb(89, 0, 255) 100%);
+    }
+    45% {
+        background: linear-gradient(rgb(255, 255, 255) 60%, rgb(89, 0, 255) 100%);
+    }
+    50% {
+        background: linear-gradient(rgb(255, 255, 255) 65%, rgb(89, 0, 255) 100%);
+    }
+    55% {
+        background: linear-gradient(rgb(255, 255, 255) 70%, rgb(89, 0, 255) 100%);
+    }
+    60% {
+        background: linear-gradient(rgb(255, 255, 255) 75%, rgb(89, 0, 255) 100%);
+    }
+    65% {
+        background: linear-gradient(rgb(255, 255, 255) 80%, rgb(89, 0, 255) 100%);
+    }
+    70% {
+        background: linear-gradient(rgb(255, 255, 255) 76%, rgb(89, 0, 255) 100%);
+    }
+    75% {
+        background: linear-gradient(rgb(255, 255, 255) 72%, rgb(89, 0, 255) 100%);
+    }
+    80% {
+        background: linear-gradient(rgb(255, 255, 255) 68%, rgb(89, 0, 255) 100%);
+    }
+    85% {
+        background: linear-gradient(rgb(255, 255, 255) 64%, rgb(89, 0, 255) 100%);
+    }
+    90% {
+        background: linear-gradient(rgb(255, 255, 255) 60%, rgb(89, 0, 255) 100%);
+    }
+    95% {
+        background: linear-gradient(rgb(255, 255, 255) 56%, rgb(89, 0, 255) 100%);
+    }
+    100% {
+        background: linear-gradient(rgb(255, 255, 255) 52%, rgb(89, 0, 255) 100%);
+    }
+}
+/* Animación de marea */
+
+/* Principalmente los perfiles: */
+.contenedor-img-bttn {
+    position: relative;
+    top: 4vh;
+    left: 5vh;
+    right: 3vh;
+    bottom: 3vh;
+
+    width: 94%;
+    height: 100%;
+    display: flex;
+}
+
+.contenedor-profile-picture {
+    display: inline-block;
+    position: relative;
+    /* Arriba posición, abajo tamaño */
+    width: 34vh;
+    height: 25vh;
+    overflow: hidden;
+    border: 2px solid rgb(21, 14, 27);
+    border-radius: 50%;
+}
+
+.fotoperfil{
+    width: auto;
+    height: 100%;
+}
+
+.botones-area {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.botones-area .Swap {
+    position: relative;
+    top: 30%;
+    left: 5%;
+    height: 40%;
+    width: auto;
+    visibility: hidden;
+}
+
+.botones-area .Swap img {
+    visibility: visible;
+}
+
+.botones-area .Compartir {
+    position: relative;
+    top: .5vh;
+    right: .5vh;
+    height: 31%;
+    width: auto;
+    visibility: hidden;
+}
+
+.botones-area .Compartir img {
+    visibility: visible;
+}
+
+.contenedor-principal h1 {
+    position: relative;
+    left: 5vh;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(21, 14, 27);
+    /* El texto se muestra en un renglón*/
+    white-space: nowrap;
+    margin-bottom: -2vh;
+}
+
+.contenedor-principal h3 {
+    position: relative;
+    left: 5vh;
+    font-size: 1em;
+    font-weight: normal;
+    color: rgb(21, 14, 27);
+    
+}
+
+header .contenedor-texto {
+    position: relative;
+    top: 3vw;
+    width: 100%;
+    height: 20%;
+    padding-bottom: 3vw;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* height: calc(auto + 100vh); */
+    /* background-color: rgb(255, 255, 255); */
+    /* margin-bottom: -2vh; */
+}
+
+/* main .contenedor-links-img {
+    position: relative;
+    top: 6vw;
+    bottom: 3vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    grid-gap: 0vh;
+} */
+
+
+main .contenedor-links-img {
+    position: relative;
+    top: 5vh;
+    left: 0vw;
+    bottom: 0vh;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0vh;
+}
+
+main .img-plus-name {
+    display: grid;
+}
+
+main .img-plus-name a{
+    display: grid;
+    width: 65%;
+    height: auto;
+    position: relative;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+}
+
+main .img-plus-name img{
+    display: grid;
+    width: 100%;
+    height: auto;
+}
+
+main .img-plus-name p{
+    display: grid;
+    height: 11vw;   /* Distancia vertical en el grid*/ 
+    position: relative;
+    top: 2vw;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+
+    font-weight: bold;
+}
+
+main .contenedor-links-img p{
+    margin-bottom: auto;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100vh;
+    height: 25vh;
+    display: block;
+    justify-content: center;
+    margin-top: 0;
+    z-index: 10;
+}
+
+footer p {
+    position: relative;
+    top: 10vh;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin-bottom: 2vh;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(to right, transparent, rgba(161, 160, 160, 0.431), transparent);
+}
+
+/* Perfiles arriba */
+/* Media queris abajo */
+
+@media (min-width: 750px) and (max-width: 900px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        position: relative;
+        font-family: 'verdana', sans-serif;
+        background-color: rgb(21, 14, 27);
+    }
+
+    .contenedor-principal {
+        position: relative;
+        top: auto;
+        left: 0vh;
+        width: 100vw;
+        height: auto;
+        overflow-x: hidden;
+        margin-right: 0%;
+        margin-left: 0%;
+        animation: cambioGradiente 1s;
+        background: linear-gradient(rgb(255, 255, 255) 50%, rgb(89, 0, 255) 100%);
+    }
+    
+    .contenedor-img-bttn {
+        position: relative;
+        top: 5vw;
+        left: 5vw;
+        width: 100vw;
+        height: 100%;
+        display: flex;
+    }
+
+    .contenedor-profile-picture {
+        display: inline-block;
+        position: relative;
+        /* Arriba posición, abajo tamaño */
+        width: 29vw;
+        height: 23vw;
+        overflow: hidden;
+        border: 2px solid rgb(21, 14, 27);
+        border-radius: 50%;
+    }
+
+    .fotoperfil {
+        position: relative;
+        width: auto;
+        height: 100%;
+        margin-left: 0%;
+    }
+
+    .botones-area {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .botones-area .Swap {
+        position: relative;
+        top: 35%;
+        left: -2%;
+        height: 35%;
+        width: auto;
+        visibility: hidden;
+    }
+
+    .botones-area .Swap img {
+        visibility: visible;
+    }
+
+    .botones-area .Compartir {
+        position: relative;
+        right: 1.5vh;
+        height: 31%;
+        width: auto;
+        visibility: hidden;
+    }
+
+    .botones-area .Compartir img {
+        visibility: visible;
+    }
+
+    header .contenedor-texto {
+        position: relative;
+        top: 7vw;
+        width: 100%;
+        height: 15%;
+        padding-bottom: 6vw;
+    }
+
+    .contenedor-principal h1 {
+        position: relative;
+        left: 3.5vh;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: rgb(21, 14, 27);
+        /* El texto se muestra en un renglón*/
+        white-space: nowrap;
+        margin-bottom: 0vh;
+    }
+
+    .contenedor-principal h3 {
+        position: relative;
+        left: 3.5vh;
+        font-size: 1em;
+        font-weight: normal;
+        color: rgb(21, 14, 27);
+        padding-top: 0vh;
+        padding-bottom: 4vh;
+    }
+
+    main {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    main .contenedor-links-img {
+        position: relative;
+        top: 5vw;
+        /* left: 6vw; */
+        left: 0vw;
+        bottom: 0vh;
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0vh;
+    }
+
+    main .img-plus-name {
+        display: grid;
+    }
+
+    main .img-plus-name a{
+        display: grid;
+        width: 60%;
+        height: auto;
+        position: relative;
+        left: 0%;
+        right: 0%;
+        margin: auto;
+    }
+
+    main .img-plus-name img{
+        display: grid;
+        width: 100%;
+        height: auto;
+    }
+
+    main .img-plus-name p{
+        display: grid;
+        height: 12vw;
+        position: relative;
+        left: 0%;
+        right: 0%;
+        margin: auto;
+    }
+
+    main .contenedor-links-img p{
+        margin-bottom: auto;
+    }
+
+    footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        display: block;
+        justify-content: center;
+        margin-top: 10%;
+        margin-bottom: 25%;
+        z-index: 0;
+    }
+    
+    footer p {
+        position: relative;
+        top: 7vh;
+        font-size: 0.8em;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        margin-bottom: 2vh;
+        text-align: center;
+        text-decoration: none;
+        background: linear-gradient(to right, transparent, rgba(161, 160, 160, 0.431), transparent);
+    }
+}
+/* Media queris arriba */
+
+/* Media queris celulares abajo */
+@media only screen and (max-width: 600px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        position: relative;
+        font-family: 'verdana', sans-serif;
+        background-color: rgb(21, 14, 27);
+    }
+
+    .contenedor-principal {
+        position: relative;
+        top: auto;
+        left: 0vh;
+        width: 100vw;
+        height: auto;
+        overflow-x: hidden;
+        margin-right: 0%;
+        margin-left: 0%;
+        animation: cambioGradiente 1s;
+        background: linear-gradient(rgb(255, 255, 255) 50%, rgb(89, 0, 255) 100%);
+    }
+    
+    .contenedor-img-bttn {
+        position: relative;
+        top: 3vh;
+        left: 3vh;
+        width: 100vw;
+        height: 100%;
+        display: flex;
+    }
+
+    .contenedor-profile-picture {
+        display: inline-block;
+        position: relative;
+        /* Arriba posición, abajo tamaño */
+        width: 14vh;
+        height: 11vh;
+        overflow: hidden;
+        border: 2px solid rgb(21, 14, 27);
+        border-radius: 50%;
+    }
+
+    .fotoperfil {
+        position: relative;
+        width: auto;
+        height: 100%;
+        margin-right: 1%;
+    }
+
+    .botones-area {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .botones-area .Swap {
+        position: relative;
+        top: 35%;
+        left: -2%;
+        height: 35%;
+        width: auto;
+        visibility: hidden;
+    }
+
+    .botones-area .Swap img {
+        visibility: visible;
+    }
+
+    .botones-area .Compartir {
+        position: relative;
+        right: -4.5vh;
+        top: -0.5vh;
+        height: 31%;
+        width: auto;
+        visibility: hidden;
+    }
+
+    .botones-area .Compartir img {
+        visibility: visible;
+    }
+
+    header .contenedor-texto {
+        position: relative;
+        top: 4vh;
+        width: 100%;
+        height: 15%;
+        padding-bottom: 1vh;
+    }
+
+    .contenedor-principal h1 {
+        position: relative;
+        left: 3.5vh;
+        font-size: 5vw;
+        font-weight: bold;
+        color: rgb(21, 14, 27);
+        /* El texto se muestra en un renglón*/
+        white-space: nowrap;
+        margin-bottom: 0vh;
+    }
+
+    .contenedor-principal h3 {
+        position: relative;
+        left: 3.5vh;
+        font-size: 3.2vw;
+        font-weight: normal;
+        color: rgb(21, 14, 27);
+        padding-top: 0vh;
+        padding-bottom: 4vh;
+    }
+
+    main {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    main .contenedor-links-img {
+        position: relative;
+        top: 5vh;
+        /* left: 6vw; */
+        left: 0vw;
+        bottom: 0vh;
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0vh;
+    }
+
+    main .img-plus-name {
+        display: grid;
+    }
+
+    main .img-plus-name a{
+        display: grid;
+        width: 75%;
+        height: auto;
+        position: relative;
+        left: 0%;
+        right: 0%;
+        margin: auto;
+    }
+
+    main .img-plus-name img{
+        display: grid;
+        width: 100%;
+        height: auto;
+    }
+
+    main .img-plus-name p{
+        display: grid;
+        height: 15vw;
+        position: relative;
+        left: 0%;
+        right: 0%;
+        margin: auto;
+    }
+
+    main .contenedor-links-img p{
+        margin-bottom: auto;
+    }
+
+    footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        display: block;
+        justify-content: center;
+        margin-top: 10%;
+        margin-bottom: 25%;
+        z-index: 0;
+    }
+    
+    footer p {
+        position: relative;
+        top: 7vh;
+        font-size: 0.8em;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        margin-bottom: 2vh;
+        text-decoration: none;
+        background: linear-gradient(to right, transparent, rgba(161, 160, 160, 0.431), transparent);
+    }
+    }
+/* Media queris celulares arriba */
+
+/* Inicio de sesión abajo */
+
+/* Inicio de sesión arriba */
+

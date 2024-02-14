@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Edit | {{ datos.nombre }} {% endblock %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div class="contenedor-principal">
+        <header>
+            <div class="contenedor-img-bttn">
+                <div class="contenedor-profile-picture">
+                    <img src="{{ datos.imagen.url }}" alt="Foto de perfil"  class="fotoperfil">
+                </div>
+    <!--  -->
+                <div class="botones-area">
+                    <button class="Swap">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                            <img src="{% static '/img/boton-swap.png' %}" width="85%" height="auto">
+                        </a>
+                    </button>
+                    <!-- Botón de Guardar -->
+                    <button class="Compartir">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                            <img src="{% static '/img/save.png' %}" width="75%" height="auto">
+                        </a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="contenedor-texto">
+                <h1>{{ datos.nombre }}</h1>
+                <h3>{{ datos.desc }}</h3>
+            </div>
+        </header>
+
+        <main>
+            <div class="contenedor-links-img">
+            {% for web in web_links %}
+                {% if 'facebook' in web %}
+                    <div class="img-plus-name">
+                        <a href="https://{{ web }}" target="_blank">
+                            <img src="{% static 'img/fb.png' %}">
+                        </a>
+                        <p>Facebook</p>
+                    </div>
+                {% elif 'instagram' in web %}
+                    <div class="img-plus-name">
+                        <a href="https://{{ web }}" target="_blank">
+                            <img src="{% static 'img/ig.png' %}">
+                        </a>
+                        <p>Instagram</p>
+                    </div>
+                {% elif 'twitter' in web %}
+                    <div class="img-plus-name">
+                        <a href="https://{{ web }}" target="_blank">
+                            <img src="{% static 'img/tw.png' %}">
+                        </a>
+                        <p>Twitter</p>
+                    </div>
+                {% elif 'whatsapp' in web %}
+                    <div class="img-plus-name">
+                        <a href="https://{{ web }}" target="_blank">
+                            <img src="{% static 'img/wa.png' %}">
+                        </a>
+                        <p>Whatsapp</p>
+                    </div>
+                {% elif 'youtube' in web %}
+                    <div class="img-plus-name">
+                        <a href="https://{{ web }}" target="_blank">
+                            <img src="{% static 'img/yt.png' %}">
+                        </a>
+                        <p>Youtube</p>
+                    </div>
+                {% elif 'twitch' in web %}
+                    <div class="img-plus-name">
+                        <a href="https://{{ web }}" target="_blank">
+                            <img src="{% static 'img/twitch.png' %}">
+                        </a>
+                        <p>Twitch</p>
+                    </div>
+                {% elif 'patreon' in web %}
+                    <div class="img-plus-name">
+                        <a href="https://{{ web }}" target="_blank">
+                            <img src="{% static 'img/patreon.png' %}">
+                        </a>
+                        <p>Patreon</p>
+                    </div>
+    
+                {% elif 'linkedin' in web %}
+                    <div class="img-plus-name">
+                        <a href="https://{{ web }}" target="_blank">
+                            <img src="{% static 'img/linkedin.png' %}">
+                        </a>
+                        <p>LinkedIn</p>
+                    </div>
+                {% elif 'github' in web %}
+                    <div class="img-plus-name">
+                        <a href="https://{{ web }}" target="_blank">
+                            <img src="{% static 'img/gh.png' %}">
+                        </a>
+                        <p>GitHub</p>
+                    </div>
+
+                    {% else %}
+                    {% for imagenLink in perfil.imagenlink_set.all %}
+                        <div class="img-plus-name">
+                            <a href="https://{{ web }}" target="_blank">
+                                {% if imagenLink.LinkImg.url == None %}
+                                    <img src="{% static 'img/plus-alpha.png' %}">
+                                {% else %}
+                                    <img src="{{ imagenLink.LinkImg.url }}">
+                                {% endif %}
+                            </a>
+                            {% if imagenLink.LinkName == None %}
+                                <p> Link </p> 
+                            {% else %}
+                                <p> {{ imagenLink.LinkName }} </p> 
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                {% endfor %}
+            </div>
+        </main>
+
+        <footer>
+            <p>Smart Business Cards ©</p>
+        </footer>
+    </div>
+
+</form>
+{% endblock %}

@@ -1,0 +1,718 @@
+body{
+    position: relative;
+    font-family: 'IBM Medium', sans-serif;
+    background-color: rgb(21, 14, 27);
+}
+
+.contenedor-principal{
+    position: relative;
+    top: auto;
+    left: 50vh;
+    width: 100vh;
+    height: 100vh;
+    display: block;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2%;
+}
+
+.contenedor-principal header{
+    position: relative;
+    top: 10vw;
+    font-size: 4vh;
+    font-family: 'IBM Serif', serif;
+}
+
+.contenedor-principal header h1{
+    position: relative;
+    left: 0vh;
+    right: 0vh;
+    margin: auto;
+    font-size: 5vh;
+    width: fit-content;
+}
+
+.contenedor-principal header h2{
+    position: relative;
+    left: 0vh;
+    right: 0vh;
+    margin: auto;
+    font-size: 5vh;
+    width: fit-content;
+    text-decoration: underline;
+}
+
+.contenedor-principal h3{
+    position: relative;
+    top: 25vh;
+    left: 0vh;
+    right: 0vh;
+    margin: auto;
+    font-size: 4vh;
+    width: fit-content;
+    font-family: 'IBM Serif', serif;
+}
+
+.contenedor-principal main{
+    position: relative;
+    top: 35vh;
+}
+
+.contenedor-principal main form{
+    position: relative;
+    top: 0vh;
+    left: 0vh;
+    right: 0vh;
+    margin: auto;
+    width: 50vh;
+    height: 50vh;
+    border-radius: 2%;
+}
+
+.contenedor-principal main form label{
+    position: relative;
+    left: 0vh;
+    font-size: 3vh;
+    font-family: 'IBM Serif', serif;
+    color: rgb(0, 0, 0);
+    height: fit-content;
+}
+
+.contenedor-principal main form ul{
+    display: none; /* "Eliminando" la lista de prohibiciones */
+}
+
+.contenedor-principal main form span{
+    display: none; /* "Eliminando" el texto posterior a la casilla */
+}
+
+.contenedor-principal main form input{
+    position: relative;
+    width: 100%;
+    height: 4vh;
+    font-size: 3vh;
+    font-family: 'IBM Medium', sans-serif;
+    background-color: rgb(227, 227, 227);
+}
+
+.contenedor-principal main form input::placeholder {
+    font-style: italic;
+}
+
+.contenedor-principal .aviso{
+    position: relative;
+    top: -20vh;
+    left: 0vh;
+    right: 0vh;
+    margin: auto;
+    width: fit-content;
+    height: auto;
+    border-radius: 2%;
+}
+
+.contenedor-principal .pregunta{
+    position: relative;
+    top: 17vw;
+    left: 0vh;
+    right: 0vh;
+    margin: auto;
+    font-size: 2.5vh;
+    width: fit-content;
+    font-family: 'IBM Serif', serif;
+    z-index: 1;
+}
+
+footer {
+    position: relative;
+    top: -3vh;
+    left: 50vh;
+    width: 100vh;
+    height: 40vh;
+    display: block;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2%;
+}
+
+footer p{
+    position: relative;
+    top: 15vh;
+    left: 24vh;
+    margin: auto;
+    font-size: 22vh;
+    width: fit-content;
+    height: fit-content;
+    font-family: 'IBM Serif', serif;
+    color: rgba(0, 0, 0, 0.7);
+    color: hsla(0, 0%, 0%, 0.7);
+}
+
+main div {
+    position: relative;
+}
+
+/* Button CSS */
+.button {
+    position: relative;
+    top: 2vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .button:hover {
+    background-color: #111111;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(228, 195, 12, 0.3);
+  } 
+  
+  .button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button:hover::before {
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+  }
+/* Button CSS */
+
+
+
+/* Diseño para tabletas */
+@media (min-width: 750px) and (max-width: 900px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        position: relative;
+        font-family: 'IBM Medium', serif;
+        background-color: rgb(21, 14, 27);
+    }
+    
+    .contenedor-principal{
+        position: relative;
+        top: auto;
+        left: 0vh;
+        width: 100vw;
+        height: 100vw;
+        display: block;
+        justify-content: center;
+        border-radius: 2%;
+        background-color: rgb(255, 255, 255);
+        overflow-x: hidden;
+        margin-right: 0%;
+        margin-left: 0%;
+    }
+    
+    .contenedor-principal header{
+        position: relative;
+        top: 10vw;
+        font-size: 4vh;
+        font-family: 'IBM Serif', serif;
+    }
+    
+    .contenedor-principal header h1{
+        position: relative;
+        left: 0vh;
+        right: 0vh;
+        margin: auto;
+        font-size: 5vw;
+        width: fit-content;
+    }
+    
+    .contenedor-principal header h2{
+        position: relative;
+        left: 0vh;
+        right: 0vh;
+        margin: auto;
+        font-size: 5vw;
+        width: fit-content;
+        text-decoration: underline;
+    }
+    
+    .contenedor-principal h3{
+        position: relative;
+        top: 20vw;
+        left: 0vh;
+        right: 0vh;
+        margin: auto;
+        font-size: 4vw;
+        width: fit-content;
+        font-family: 'IBM Serif', serif;
+    }
+    
+    .contenedor-principal main{
+        position: relative;
+        top: 30vh;
+    }
+    
+    .contenedor-principal main form{
+        position: relative;
+        top: 0vh;
+        left: 0vh;
+        right: 0vh;
+        margin: auto;
+        width: 47vw;
+        height: 50vh;
+        border-radius: 2%;
+    }
+    
+    .contenedor-principal main form label{
+        position: relative;
+        left: 0vh;
+        font-size: 3vh;
+        font-family: 'IBM Serif', serif;
+        color: rgb(0, 0, 0);
+        height: fit-content;
+    }
+    
+    .contenedor-principal main form ul{
+        display: none; /* "Eliminando" la lista de prohibiciones */
+    }
+    
+    .contenedor-principal main form span{
+        display: none; /* "Eliminando" el texto posterior a la casilla */
+    }
+    
+    .contenedor-principal main form input{
+        position: relative;
+        width: 100%;
+        height: 4vh;
+        font-size: 3vh;
+        font-family: 'IBM Medium', sans-serif;
+        background-color: rgb(227, 227, 227);
+        margin-bottom: 2vw;
+    }
+    
+    .contenedor-principal main form input::placeholder {
+        font-style: italic;
+    }
+    
+    .contenedor-principal .aviso{
+        position: relative;
+        top: -25vh;
+        left: 0vh;
+        right: 0vh;
+        margin: auto;
+        width: fit-content;
+        height: auto;
+        border-radius: 2%;
+    }
+    
+    .contenedor-principal .pregunta{
+        position: relative;
+        top: 20vw;
+        left: 0vh;
+        right: 0vh;
+        margin: auto;
+        font-size: 2.5vw;
+        width: fit-content;
+        font-family: 'IBM Serif', serif;
+        z-index: 1;
+    }
+    
+    footer {
+        position: relative;
+        left: 0;
+        top: -4vh;
+        width: 100vw;
+        height: 30vh;  /* Usa vh en lugar de vw */
+        background-color: rgb(255, 255, 255);
+        overflow-x: hidden;
+        margin-right: 0%;
+        margin-left: 0%;
+        border-radius: 2%;
+    }
+    
+    footer p{
+        position: relative;
+        top: 5vh;
+        left: 25vh;
+        margin: auto;
+        font-size: 20vw;
+        width: fit-content;
+        height: fit-content;
+        font-family: 'IBM Serif', serif;
+        color: rgba(0, 0, 0, 0.7);
+        color: hsla(0, 0%, 0%, 0.7);
+    }
+    
+    main div {
+        position: relative;
+    }
+    
+    /* Button CSS */
+    .button {
+        position: relative;
+        top: 2vw;
+        left: 3.5vw;
+        width: 40vw;
+    
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #000000;
+        border: none;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 1;
+      }
+      
+      .button:hover {
+        background-color: #111111;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      }
+      
+      .button:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(228, 195, 12, 0.3);
+      } 
+      
+      .button:active {
+        transform: translateY(1px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+      }
+      
+      .button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      
+      .button::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        z-index: -1;
+        transition: all 0.3s ease-in-out;
+      }
+      
+      .button:hover::before {
+        top: -8px;
+        left: -8px;
+        right: -8px;
+        bottom: -8px;
+      }
+}
+/* Diseño para tabletas */
+
+
+/* Diseño para Celulares */
+@media only screen and (max-width: 600px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        position: relative;
+        font-family: 'IBM Medium', serif;
+        background-color: rgb(21, 14, 27);
+    }
+    
+    .contenedor-principal{
+        position: relative;
+        top: auto;
+        left: 0vh;
+        width: 100vw;
+        height: 75vh;
+        height: 75svh;
+        display: block;
+        justify-content: center;
+        background-color: rgb(255, 255, 255);
+        overflow-x: hidden;
+        margin-right: 0%;
+        margin-left: 0%;
+    }
+    
+    .contenedor-principal header{
+        position: relative;
+        top: 8vh;
+        top: 8svh;
+        font-size: 4vh;
+        font-family: 'IBM Serif', serif;
+    }
+    
+    .contenedor-principal header h1{
+        position: relative;
+        left: 0vh;
+        right: 0vh;
+        margin: auto;
+        font-size: 3vh;
+        font-size: 3svh;
+        width: fit-content;
+    }
+    
+    .contenedor-principal header h2{
+        position: relative;
+        left: 0vh;
+        right: 0vh;
+        margin: auto;
+        font-size: 3vh;
+        font-size: 3svh;
+        width: fit-content;
+        text-decoration: underline;
+    }
+    
+    .contenedor-principal h3{
+        position: relative;
+        top: 12vh;
+        top: 12svh;
+        left: 0vh;
+        right: 0vh;
+        margin: auto;
+        font-size: 2.5vh;
+        font-size: 2.5svh;
+        width: fit-content;
+        font-family: 'IBM Serif', serif;
+    }
+    
+    .contenedor-principal main{
+        position: relative;
+        top: 20vh;
+    }
+    
+    .contenedor-principal main form{
+        position: relative;
+        top: 0vh;
+        left: 0vh;
+        right: 0vh;
+        margin: auto;
+        width: 28vh;
+        width: 28svh;
+        height: 50vh;
+        border-radius: 2%;
+    }
+    
+    .contenedor-principal main form label{
+        position: relative;
+        left: 0vh;
+        font-size: 2vh;
+        font-size: 2svh;
+        font-family: 'IBM Serif', serif;
+        color: rgb(0, 0, 0);
+        height: fit-content;
+    }
+    
+    .contenedor-principal main form ul{
+        display: none; /* "Eliminando" la lista de prohibiciones */
+    }
+    
+    .contenedor-principal main form span{
+        display: none; /* "Eliminando" el texto posterior a la casilla */
+    }
+    
+    .contenedor-principal main form input{
+        position: relative;
+        width: 100%;
+        height: 3vh;
+        font-size: 2vh;
+        font-family: 'IBM Medium', sans-serif;
+        background-color: rgb(227, 227, 227);
+        margin-bottom: 1.5vh;
+        margin-bottom: 1.5svh;
+    }
+    
+    .contenedor-principal main form input::placeholder {
+        font-style: italic;
+    }
+    
+    .contenedor-principal .aviso{
+        position: relative;
+        top: -35vh;
+        left: 0vh;
+        right: 0vh;
+        margin: auto;
+        width: fit-content;
+        height: auto;
+        font-size: 1.5vh;
+        font-size: 1.5svh;
+    }
+    
+    .contenedor-principal .pregunta{
+        position: relative;
+        top: 0vh;
+        left: 0vh;
+        right: 0vh;
+        margin: auto;
+        font-size: 1.5vh;
+        font-size: 1.5svh;
+        width: fit-content;
+        font-family: 'IBM Serif', serif;
+        z-index: 1;
+    }
+    
+    footer {
+        position: relative;
+        left: 0;
+        width: 100%;
+        height: 10vh;  /* Usa vh en lugar de vw */
+        display: block;
+        background-color: rgb(255, 255, 255);
+        overflow-x: hidden;
+        margin-right: 0%;
+        margin-left: 0%;
+    }
+    
+    footer p{
+        position: relative;
+        top: -2vh;
+        left: 20%;
+        margin: auto;
+        font-size: 10vh;
+        width: fit-content;
+        height: fit-content;
+        font-family: 'IBM Serif', serif;
+        color: rgba(0, 0, 0, 0.7);
+        color: hsla(0, 0%, 0%, 0.7);
+        display: block;
+    }
+    
+    main div {
+        position: relative;
+    }
+    
+    /* Button CSS */
+    .button {
+        position: relative;
+        top: 2vh;
+        left: 20%;
+        width: 60%;
+    
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #000000;
+        border: none;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 1;
+      }
+      
+      .button:hover {
+        background-color: #111111;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      }
+      
+      .button:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(228, 195, 12, 0.3);
+      } 
+      
+      .button:active {
+        transform: translateY(1px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+      }
+      
+      .button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      
+      .button::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        z-index: -1;
+        transition: all 0.3s ease-in-out;
+      }
+      
+      .button:hover::before {
+        top: -8px;
+        left: -8px;
+        right: -8px;
+        bottom: -8px;
+      }
+}
+/* Diseño para Celulares */
+
+
+/* Fuentes tipograficas */
+@font-face {
+    font-family: 'IBM Medium';
+    src: url('{% static "fonts/IBMPlexSans-Medium.ttf" %}');
+}
+
+@font-face {
+    font-family: 'IBM Bold';
+    src: url('{% static "fonts/IBMPlexSans-Bold.ttf" %}');
+}
+
+@font-face {
+    font-family: 'IBM Serif';
+    src: url('{% static "fonts/IBMPlexSerif-Medium.ttf" %}');
+}

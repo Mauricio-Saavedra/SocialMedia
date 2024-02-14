@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/register.css' %}" rel="stylesheet">
+    <title>SBC | Registro </title>
+</head>
+<body>
+    <div class="contenedor-principal">
+        
+        <header>
+            <h1>SBC</h1>
+            <h2>Smart Business Cards</h2>
+        </header>
+        <h3>Regístrate</h3>
+
+    <main>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <div>
+                <button class="button" type="submit">
+                    Registrarse
+                </button>
+            </div>
+        </form>
+    </main>
+    
+        <p style="color: tomato;" class="aviso">
+            <b>
+                {% if conflicto %}
+                    {{ error }}
+                {% endif %}
+            </b>
+        </p>
+        
+        <p style="color: green;" class="aviso">
+            <b>
+            {% if succes %}
+                {{ aviso }}
+            {% endif %}
+            </b>
+        </p>
+    
+        <p class="pregunta">
+            <a href="{% url 'signin' %}">
+                Ya tienes una cuenta? Inicia sesion
+            </a>
+        </p>
+
+    </div>
+    <footer>
+        <div>
+            <p>SBC</p>
+        </div>
+    </footer>
+</body>
+</html>
+<!-- Pruebas -->
