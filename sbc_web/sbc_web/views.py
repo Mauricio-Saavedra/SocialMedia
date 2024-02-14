@@ -63,6 +63,3 @@ def cerrar_sesion(request):
     else:
         return redirect('register')
 
-
-def custom_page_not_found_view(request, exception):
-    return render(request, "errors/404.html", {}, status=404)

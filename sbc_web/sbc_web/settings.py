@@ -26,6 +26,8 @@ awedfvhjklmnhyfd = 'django-insecure-r9)!oqa40rokbu*2r^4mfsl6u!xloasly1z9fe%4r#h@
 
 SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 
+# 
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'RENDER' not in os.environ
 
@@ -82,6 +84,13 @@ WSGI_APPLICATION = 'sbc_web.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 DATABASES = {
     'default': dj_database_url.config(
@@ -150,7 +159,11 @@ LOGIN_REDIRECT_URL = '/'
 
 # Espacio para el modulo 'whitenoise' y sus archivos estaticos:
 # Directorio para archivos estáticos de las aplicaciones
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATICFILES_DIRS = [
+    # os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, "sbc_web", "static"),
+    os.path.join(BASE_DIR, "perfiles", "static"),
+    ]
 
 # # Directorio donde se recogerán los archivos estáticos después de ejecutar collectstatic
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

@@ -21,14 +21,12 @@ from perfiles import views
 from django.conf import settings
 from django.conf.urls.static import static
 
-# Definición de la vista personalizada para  404
-handler404 = views.custom_page_not_found_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('registro/', sbc_web_views.register, name='register'),
+    # path('registro/', sbc_web_views.register, name='register'),
     path('logout/', sbc_web_views.cerrar_sesion, name='logout'),
-    path('', sbc_web_views.iniciar_sesion, name='signin'),
+    # path('', sbc_web_views.iniciar_sesion, name='signin'),
     path('perfiles/', include('perfiles.urls'), name='perfiles'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

@@ -19,9 +19,10 @@ register_converter(SlugConverter, 'slug')   # 4.-
 
 
 urlpatterns = [
-    path('SBC/<int:id>/<slug:nombre>', views.SBC, name='SBC'),
-    path('SBC/<int:id>/<slug:nombre>/e_e', views.editar_perfil, name='edit_sbc'),
+    # path('SBC/<int:id>/<slug:nombre>', views.SBC, name='SBC'),
+    # path('SBC/<int:id>/<slug:nombre>/e_e', views.editar_perfil, name='edit_sbc'),
     path('compartir/', views.obtener_url, name='obtener_url'),
+    path('MauricioSaavedra/', views.Mauricio_Saavedra, name='Mauricio_Saavedra'),
 ]
 
 # Explicación a mí mismo de la Clase SlugConverter:

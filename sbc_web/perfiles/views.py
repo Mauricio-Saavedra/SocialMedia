@@ -3,6 +3,23 @@ from .models import Perfiles
 from .forms import ProfileForm
 from django.contrib.auth.decorators import login_required
 
+def Mauricio_Saavedra(request):
+    nombre = 'Mauricio Saavedra'
+    desc = 'Escritor de Código y Literatura'
+    web_links = [
+        'linkedin.com/in/original-mauricio-saavedra/',
+        'github.com/Mauricio-Saavedra',
+        'amazon.com.mx/dp/B0BRLFZP7V?ref_=cm_sw_r_cp_ud_dp_6W2SCJKZ2NB8SSNV6H09',
+        'twitter.com/_MauSaavedra',
+        'music.youtube.com/playlist?list=OLAK5uy_lYdwxvfKoDIiUba2_Dh1Pc-zOLLANCwKY',
+        ]
+    datos = {
+        'nombre' : nombre,
+        'desc'   : desc,
+    }
+    return render(request, 'mauricio.html', {'datos': datos, 'web_links': web_links})
+        # Esto pasa los datos y los links a la plantilla.
+
 @login_required
 def SBC(request, id, nombre):
     datos = Perfiles.objects.get(id=id) # Esto obtiene los datos del perfil con el id que se le pasa por parámetro.
